@@ -1,11 +1,25 @@
 import React, {Component} from 'react'
+import "./Button.less";
 
-import {sayHello} from 'test-node-ran0';
 
 class Greeter extends Component {
+    constructor(props) {
+        super(props);
+    }
+
+
+    onClick = () => {
+        const {onClick} = this.props;
+        console.log("=======");
+        if (onClick) {
+            onClick();
+        }
+    }
+
     render() {
-        console.log(sayHello("一汽"));
-        return (<div>ddddd</div>);
+        return (<div>
+            <button className={"reactBtnPrimary"} onClick={this.onClick}>按钮</button>
+        </div>);
     }
 }
 
