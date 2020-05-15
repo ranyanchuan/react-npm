@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import "./Button.less";
+import "./Greeter.less";
 
 
 class Greeter extends Component {
@@ -10,7 +10,6 @@ class Greeter extends Component {
 
     onClick = () => {
         const {onClick} = this.props;
-        console.log("=======");
         if (onClick) {
             onClick();
         }
@@ -18,7 +17,7 @@ class Greeter extends Component {
 
     render() {
         return (<div>
-            <button className={"reactBtnPrimary"} onClick={this.onClick}>按钮</button>
+            <div className={"reactBtnPrimary"} onClick={this.onClick}>按钮</div>
         </div>);
     }
 }
